@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node",
+"class": "Command",
+"language": "GDScript",
+"path": "res://engine/commands/command.gd"
+}, {
 "base": "Area2D",
 "class": "Droppable",
 "language": "GDScript",
@@ -45,6 +50,7 @@ _global_script_classes=[ {
 "path": "res://engine/helper_scipts/entity_helper.gd"
 } ]
 _global_script_class_icons={
+"Command": "",
 "Droppable": "",
 "Enemy": "",
 "Entity": "",
@@ -69,6 +75,7 @@ screenfx="*res://engine/screenfx.tscn"
 settings="*res://engine/settings.gd"
 controller="*res://engine/controller.gd"
 music="*res://engine/music.gd"
+command_runner="*res://engine/commands/command_runner.gd"
 
 [debug]
 
