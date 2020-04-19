@@ -21,7 +21,11 @@ func add_new_message(source: String, text: String) -> void:
 func _input(event) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		if is_typing():
-			send_message_global(network.my_player_data.name, $EditMessage.text)
+			if ($EditMessage.text.begins_with("/")):
+				command_runner.run($EditMessage.text.trim_prefix("/"))
+			else:
+				send_message_global(network.my_player_data.name, $EditMessage.text)
+				
 			$EditMessage.clear()
 			$EditMessage.release_focus()
 			$IncomingMessages.scroll_to_line($IncomingMessages.get_line_count()-1)

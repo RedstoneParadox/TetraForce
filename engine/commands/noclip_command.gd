@@ -4,4 +4,5 @@ func _ready():
 	pass
 
 func run(data: PoolStringArray):
+	print("I got here!")
 	pass
