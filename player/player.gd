@@ -47,6 +47,7 @@ func _ready() -> void:
 	connect_camera()
 	
 	$PlayerName.visible = settings.get_pref("show_name_tags")
+	command_runner.local_player = self
 
 func initialize() -> void:
 	if is_network_master():

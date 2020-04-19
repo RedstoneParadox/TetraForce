@@ -41,6 +41,9 @@ var entity_shader = preload("res://engine/entity.shader")
 
 var room: Room
 
+# HITBOX
+var hitbox_collision: CollisionShape2D = null
+
 func _ready() -> void:
 	
 	texture_default = sprite.texture
@@ -73,6 +76,7 @@ func create_hitbox() -> void:
 	new_shape.extents = $CollisionShape2D.shape.extents + Vector2(1,1)
 	
 	hitbox = new_hitbox
+	hitbox_collision = new_collision
 
 func loop_network() -> void:
 	set_network_master(network.map_owners[network.current_map.name])
