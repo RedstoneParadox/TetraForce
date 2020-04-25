@@ -1,7 +1,7 @@
 extends "res://engine/commands/command.gd"
 
-func _ready():
-	pass
+func _init():
+	requires_cheats = true
 
 func run(data: PoolStringArray):
 	if command_runner.local_player != null:

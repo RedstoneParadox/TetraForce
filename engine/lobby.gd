@@ -10,6 +10,7 @@ onready var host = settings.get_pref("host_address")
 
 func create_level() -> void:
 	network.initialize()
+	network.cheats = $panel/enable_cheats.pressed
 	network.set_process(true)
 	var level = load(map).instance()
 	get_tree().get_root().add_child(level)

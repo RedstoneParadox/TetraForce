@@ -1,7 +1,9 @@
-extends Node
+extends Resource
 class_name Command
 
-func _ready():
+var requires_cheats: bool = false
+
+func _init():
 	pass
 
 func run(data: PoolStringArray):

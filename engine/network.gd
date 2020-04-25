@@ -16,6 +16,7 @@ var my_player_data: Dictionary = {
 
 var clock: Timer
 
+var cheats: bool = false
 
 var rooms: Dictionary = {}
 

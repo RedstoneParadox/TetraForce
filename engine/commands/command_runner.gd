@@ -14,5 +14,6 @@ func run(string: String):
 	
 	if strings[0] is String && commands.has(strings[0]):
 		var command: Command = commands[strings[0]]
-		command.run(strings)
-		pass
+		
+		if (command.requires_cheats == false) or (command.requires_cheats == true and network.cheats):
+			command.run(strings)
